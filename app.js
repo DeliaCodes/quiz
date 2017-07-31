@@ -5,6 +5,7 @@
 $('#start').click(function () {
 	$('#quiz').empty();
 	$('#quiz').append()
+	//$('#quiz').
 }
 );
 
