@@ -1,7 +1,13 @@
-h1 {
+* {
+	text-align: center;
+}
+
+header {
+	background-color: #42f49e;
 	font-family: 'Slabo 27px', serif;
 }
 
 main {
+		background-color: #caeef9;
 		font-family: 'Roboto', sans-serif;
 }
