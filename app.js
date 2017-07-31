@@ -5,7 +5,7 @@
 
 $('#start').click(function () {
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red" required><div style="background-color: red;"></div><br><button id="continue1">Submit Answer</button></form>');
+	$('#quiz').append('<form><label>What does Bui mean?</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red" required><div style="background-color: red;"><p>Red</p></div><br><button id="continue1">Submit Answer</button></form>');
 }
 );
 
@@ -15,13 +15,13 @@ var	incorrectAnswers = 0;
 //This is the click of the next page (and maybe the other pages thereafter) 
 $('#continue1').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue2">Submit Answer</button></form>');
+	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><p>Brown</p><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"><p>Red</p></div><br><button id="continue2">Submit Answer</button></form>');
 }
 );
 
 $('#continue2').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue3">Submit Answer</button></form>');
+	$('#quiz').append('<form><label>Dearg</label><br><input type="radio" name="color" value="purple"><div style="background-color: purple;" ></div><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;"><p>Yellow</p></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"><p>Red</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><button id="continue3">Submit Answer</button></form>');
 }
 );
 
