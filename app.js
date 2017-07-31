@@ -4,8 +4,7 @@
 */
 $('#start').click(function () {
 	$('#quiz').empty();
-	$('#quiz').append()
-	//$('#quiz').
+	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button>Submit Answer</button></form>')
 }
 );
 
