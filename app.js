@@ -70,7 +70,7 @@ $('#continue7').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue8">Submit Answer</button></form>');
 }
 );
-
+//Dubh
 $('#continue8').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
 	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue9">Submit Answer</button></form>');
