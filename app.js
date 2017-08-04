@@ -6,9 +6,12 @@
 // currentAnswer is checking against the input value
 var currentAnswer = 'yellow';
 
+//should I keep this?
+
 $('#start').click(function () {
-	$('#quiz').empty();
-	$('#quiz').append('<form><label>What does Bui mean?</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red" required><div style="background-color: red;"><p>Red</p></div><br><button id="continue1">Submit Answer</button></form>');
+	$('.question').toggle();
+	//$('#quiz').empty();
+	//$('#quiz').append('<form><label>What does Bui mean?</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red" required><div style="background-color: red;"><p>Red</p></div><br><button id="continue1">Submit Answer</button></form>');
 }
 );
  /*Skeleton form at all time and then just change content. Currently loading form after JS is loaded.
