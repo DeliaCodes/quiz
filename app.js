@@ -1,17 +1,24 @@
 "use strict";
 
-/* click to start the quiz - it replaces the div with the correct quiz style
+/* click to start the quiz - two choices for how to do this - remove and insert diff elements (seems messy!) or 
+you can hide the questions and then unhide them to progress which is what I've chosen.
 */
 
 // currentAnswer is checking against the input value
 var currentAnswer = 'yellow';
 
-//should I keep this?
+//
 
 $('#start').click(function () {
 	$('.question').toggle();
-	//$('#quiz').empty();
+
+	//need to remove the initial question
+	
+	/* Previously used code
+	$('#quiz').empty();
 	//$('#quiz').append('<form><label>What does Bui mean?</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red" required><div style="background-color: red;"><p>Red</p></div><br><button id="continue1">Submit Answer</button></form>');
+	
+	*/
 }
 );
  /*Skeleton form at all time and then just change content. Currently loading form after JS is loaded.
@@ -28,55 +35,55 @@ var	incorrectAnswers = 0;
 $('#continue1').click(function(){
 	event.preventDefault();
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Donn</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><p>Brown</p><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"><p>Red</p></div><br><button id="continue2">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
 //Dearg
 $('#continue2').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Dearg</label><br><input type="radio" name="color" value="purple"><div style="background-color: purple;" ></div><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;"><p>Yellow</p></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"><p>Red</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><button id="continue3">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
 //Ban
 $('#continue3').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue4">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
 //Glas
 $('#continue4').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue5">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
 //Bandearg
 $('#continue5').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue6">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
 //Gorm
 $('#continue6').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue7">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
 //Corcra
 $('#continue7').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue8">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 //Dubh
 $('#continue8').click(function(correctAnswers, incorrectAnswers){
 	$('#quiz').empty();
-	$('#quiz').append('<form><label>Bui</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"></div><br><input type="radio" name="color" value="red"><div style="background-color: red;"></div><br><button id="continue9">Submit Answer</button></form>');
+	$('#quiz').append('');
 }
 );
 
