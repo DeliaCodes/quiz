@@ -6,11 +6,14 @@ you can hide the questions and then unhide them to progress which is what I've c
 
 // currentAnswer is checking against the input value
 var currentAnswer = 'yellow';
+var correctCount = 0;
+var	incorrectCount = 0;
 
 //
 
 $('#start').click(function () {
-	$('.question').toggle();
+	$('#intro').hide();
+	$('#question1').toggle();
 
 	//need to remove the initial question
 	
@@ -27,68 +30,59 @@ $('#start').click(function () {
  Container - word. Wrong Answers. Right Answer. And Function to update form based on that data system.
  */
 
-var correctAnswers = 0;
-var	incorrectAnswers = 0;
 
-//This is the click of the next page (and maybe the other pages thereafter) - update content vs new form
+
 //Donn question
 $('#continue1').click(function(){
-	event.preventDefault();
-	$('#quiz').empty();
-	$('#quiz').append('');
+		$('#question1').hide();
+	$('#question2').toggle();
 }
 );
 
 //Dearg
-$('#continue2').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue2').click(function(){
+	t
 }
 );
 
 //Ban
-$('#continue3').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue3').click(function(){
+
 }
 );
 
 //Glas
-$('#continue4').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue4').click(function(){
+	
 }
 );
 
 //Bandearg
-$('#continue5').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue5').click(function(){
+
 }
 );
 
 //Gorm
-$('#continue6').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue6').click(function(){
+
 }
 );
 
 //Corcra
-$('#continue7').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue7').click(function(){
+
 }
 );
+
 //Dubh
-$('#continue8').click(function(correctAnswers, incorrectAnswers){
-	$('#quiz').empty();
-	$('#quiz').append('');
+$('#continue8').click(function(){
+
 }
 );
 
 //This is the results page
-$('#continue9').click(function(correctAnswers, incorrectAnswers){
+$('#continue9').click(function(){
 	$('#quiz').empty();
 	$('#quiz').append();
 }
