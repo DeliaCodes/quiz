@@ -41,50 +41,56 @@ $('#continue1').click(function(){
 
 //Dearg
 $('#continue2').click(function(){
-	t
+	$('#question2').hide();
+	$('#question3').toggle();
 }
 );
 
 //Ban
 $('#continue3').click(function(){
-
+	$('#question3').hide();
+	$('#question4').toggle();
 }
 );
 
 //Glas
 $('#continue4').click(function(){
-	
+		$('#question4').hide();
+	$('#question5').toggle();
 }
 );
 
 //Bandearg
 $('#continue5').click(function(){
-
+	$('#question5').hide();
+	$('#question6').toggle();
 }
 );
 
 //Gorm
 $('#continue6').click(function(){
-
+	$('#question6').hide();
+	$('#question7').toggle();
 }
 );
 
 //Corcra
 $('#continue7').click(function(){
-
+	$('#question7').hide();
+	$('#question8').toggle();
 }
 );
 
 //Dubh
 $('#continue8').click(function(){
-
+		$('#question8').hide();
+	$('#question9').toggle();
 }
 );
 
+
 //This is the results page
 $('#continue9').click(function(){
-	$('#quiz').empty();
-	$('#quiz').append();
-}
+	
 );
 
