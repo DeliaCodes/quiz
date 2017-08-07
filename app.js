@@ -13,17 +13,7 @@ var	incorrectCount = 0;
 
 $('#start').click(function () {
 	$('#intro').hide();
-	$('#question1').toggle();
-
-	//need to remove the initial question
-	
-	/* Previously used code
-	$('#quiz').empty();
-	//$('#quiz').append('<form><label>What does Bui mean?</label><br><input type="radio" name="color" value="yellow"><div style="background-color: yellow;" ><p>Yellow</p></div><br><input type="radio" name="color" value="brown"><div style="background-color: brown;"><p>Brown</p></div><br><input type="radio" name="color" value="pink"><div style="background-color: pink;"><p>Pink</p></div><br><input type="radio" name="color" value="red" required><div style="background-color: red;"><p>Red</p></div><br><button id="continue1">Submit Answer</button></form>');
-	
-	*/
-}
-);
+	$('#question1').toggle();});
  /*Skeleton form at all time and then just change content. Currently loading form after JS is loaded.
  base form that checks if its right and updates the form
  class to right answer or current answers in a state and checked against that state.
@@ -34,56 +24,56 @@ $('#start').click(function () {
 
 //Donn question
 $('#continue1').click(function(){
-		$('#question1').hide();
+		$('#question1').detach();
 	$('#question2').toggle();
 }
 );
 
 //Dearg
 $('#continue2').click(function(){
-	$('#question2').hide();
+	$('#question2').detach();
 	$('#question3').toggle();
 }
 );
 
 //Ban
 $('#continue3').click(function(){
-	$('#question3').hide();
+	$('#question3').detach();
 	$('#question4').toggle();
 }
 );
 
 //Glas
 $('#continue4').click(function(){
-		$('#question4').hide();
+		$('#question4').detach();
 	$('#question5').toggle();
 }
 );
 
 //Bandearg
 $('#continue5').click(function(){
-	$('#question5').hide();
+	$('#question5').detach();
 	$('#question6').toggle();
 }
 );
 
 //Gorm
 $('#continue6').click(function(){
-	$('#question6').hide();
+	$('#question6').detach();
 	$('#question7').toggle();
 }
 );
 
 //Corcra
 $('#continue7').click(function(){
-	$('#question7').hide();
+	$('#question7').detach();
 	$('#question8').toggle();
 }
 );
 
 //Dubh
 $('#continue8').click(function(){
-		$('#question8').hide();
+		$('#question8').detach();
 	$('#question9').toggle();
 }
 );
@@ -91,6 +81,6 @@ $('#continue8').click(function(){
 
 //This is the results page
 $('#continue9').click(function(){
-	
-);
+
+});
 
