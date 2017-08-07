@@ -23,8 +23,8 @@ $('#start').click(function () {
 //currently broken - correct answer is yellow  
 $('#question1').submit(function(){
 	event.preventDefault();
-	var userAnswer = $('#question1 :input');
-	if ( userAnswer == currentAnswer) {++correctCount}
+	var userAnswer = $('#question1 :input').val();
+	if ( userAnswer == currentAnswer) {correctCount++}
 	else { incorrectCount++}
 }
 	);
