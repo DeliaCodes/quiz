@@ -88,5 +88,8 @@ $('#question9').detach();
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php
 $('#continue10').click(function(){
 	$('#question10').detach();
+	$('#correct').html('You got ' + correctCount + ' colors right!')
+	$('#incorrect').html('You got ' + incorrectCount + ' colors wrong!')
+	$('#results').toggle();
 });
 
