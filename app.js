@@ -79,8 +79,14 @@ $('#continue8').click(function(){
 );
 
 
-//This is the results page
-$('#continue9').click(function(){
 
+$('#continue9').click(function(){
+$('#question9').detach();
+	$('#question10').toggle();
+});
+
+//This is the results page - ref http://www.omniglot.com/language/colours/irish.php
+$('#continue10').click(function(){
+	$('#question10').detach();
 });
 
