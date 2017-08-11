@@ -33,8 +33,12 @@ $('#start').click(function () {
 //Donn question
 $('#continue1').click(function(){
 	var userAnswer = $('#question1 :input').val();
-	if ( userAnswer ==  answers['bui']) {correctCount++}
-	else { incorrectCount++}
+	if ( userAnswer ==  answers['bui']) {
+	 alert('You got it right!');
+	 correctCount++}
+	else { 
+		alert('Sorry, that is not correct');
+		incorrectCount++}
 
 	$('#question1').detach();
 	$('#question2').toggle();
@@ -46,8 +50,11 @@ $('#continue1').click(function(){
 //Dearg
 $('#continue2').click(function(){
 	var userAnswer = $('#question2 :input');
-	if ( userAnswer == answers['donn']) {++correctCount}
-	else { incorrectCount++}
+	if ( userAnswer == answers['donn']) {
+		alert('You got it right!');
+		correctCount++}
+	else { alert('Sorry, that is not correct');
+			incorrectCount++}
 	$('#question2').detach();
 	$('#question3').toggle();
 }
@@ -57,7 +64,9 @@ $('#continue2').click(function(){
 //Ban
 $('#continue3').click(function(){
 	var userAnswer = $('#question3 :input');
-	if ( userAnswer == answers['dearg']) {++correctCount}
+	if ( userAnswer == answers['dearg']) {
+		alert('You got it right!');
+		correctCount++}
 	else { incorrectCount++}
 	$('#question3').detach();
 	$('#question4').toggle();
@@ -68,7 +77,9 @@ $('#continue3').click(function(){
 //Glas
 $('#continue4').click(function(){
 	var userAnswer = $('#question4 :input');
-	if ( userAnswer == answers['ban']) {++correctCount}
+	if ( userAnswer == answers['ban']) {
+		alert('You got it right!');
+		correctCount++}
 	else { incorrectCount++}
 	$('#question4').detach();
 	$('#question5').toggle();
@@ -79,8 +90,12 @@ $('#continue4').click(function(){
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php
 $('#continue5').click(function(){
 	var userAnswer = $('#question5 :input');
-	if ( userAnswer == answers['glas']) {++correctCount}
-	else { incorrectCount++}
+	if ( userAnswer == answers['glas']) {
+		alert('You got it right!');
+		correctCount++}
+	else {
+		alert('Sorry, that is not correct');
+		incorrectCount++}
 	$('#question5').detach();
 	$('#correct').html("You got " + correctCount + " colors right!")
 	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
