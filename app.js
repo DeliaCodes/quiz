@@ -9,7 +9,17 @@ var currentAnswer = 'yellow';
 var correctCount = 0;
 var	incorrectCount = 0;
 var answers = {
-	
+	bui : 'yellow',
+	donn : 'brown',
+	dearg : 'red',
+	ban : 'white',
+	glas : 'green',
+	bandearg : 'pink',
+	gorm : 'blue',
+	corcra : 'purple',
+	dubh : 'black',
+	liath : 'grey'
+
 };
 
 //
