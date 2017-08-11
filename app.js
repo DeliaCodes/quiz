@@ -3,9 +3,6 @@
 /* click to start the quiz - two choices for how to do this - remove and insert diff elements (seems messy!) or 
 you can hide the questions and then unhide them to progress which is what I've chosen.
 */
-
-// currentAnswer is checking against the input value
-var currentAnswer = 'yellow';
 var correctCount = 0;
 var	incorrectCount = 0;
 var answers = {
@@ -32,6 +29,7 @@ $('#start').click(function () {
 
 //Donn question
 $('#continue1').click(function(){
+	event.preventDefault();
 	var userAnswer = $('#question1 :input').val();
 	if ( userAnswer ==  answers['bui']) {
 	 alert('You got it right!');
@@ -49,6 +47,7 @@ $('#continue1').click(function(){
 
 //Dearg
 $('#continue2').click(function(){
+	event.preventDefault();
 	var userAnswer = $('#question2 :input');
 	if ( userAnswer == answers['donn']) {
 		alert('You got it right!');
@@ -63,6 +62,7 @@ $('#continue2').click(function(){
 
 //Ban
 $('#continue3').click(function(){
+	event.preventDefault();
 	var userAnswer = $('#question3 :input');
 	if ( userAnswer == answers['dearg']) {
 		alert('You got it right!');
@@ -76,6 +76,7 @@ $('#continue3').click(function(){
 
 //Glas
 $('#continue4').click(function(){
+	event.preventDefault();
 	var userAnswer = $('#question4 :input');
 	if ( userAnswer == answers['ban']) {
 		alert('You got it right!');
@@ -89,6 +90,7 @@ $('#continue4').click(function(){
 
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php
 $('#continue5').click(function(){
+	event.preventDefault();
 	var userAnswer = $('#question5 :input');
 	if ( userAnswer == answers['glas']) {
 		alert('You got it right!');
