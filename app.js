@@ -8,6 +8,9 @@ you can hide the questions and then unhide them to progress which is what I've c
 var currentAnswer = 'yellow';
 var correctCount = 0;
 var	incorrectCount = 0;
+var answers = {
+	
+};
 
 //
 
