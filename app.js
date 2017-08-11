@@ -37,7 +37,9 @@ $('#start').click(function () {
 //Displays Donn question
 $('#continue1').click(function(){
 	var userAnswer = $('#question1 :input').val();
-	if ( userAnswer == answers['bui']) {correctCount++}
+	if ( userAnswer == answers['bui']) {correctCount++
+
+	}
 	else { incorrectCount++}
 
 	$('#question1').detach();

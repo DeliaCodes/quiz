@@ -12,3 +12,11 @@ main {
 		background-color: #caeef9;
 		font-family: 'Roboto', sans-serif;
 }
+
+#quiz {
+	height: 100%;
+}
+
+form {
+	height: 100%;
+}
