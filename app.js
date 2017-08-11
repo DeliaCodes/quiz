@@ -20,7 +20,36 @@ var answers = {
 
 };
 
-//
+//what are my keys here? Question : color? or should it be bui : "Question x of y: What does Bui mean?"
+var questions = {
+bui : 'Question 1 of 10: What color is Bui?',
+donn : 'Question 2 of 10: What color is Donn?',
+dearg : 'Question 3 of 10: What color is Dearg?',
+ban : 'Question 4 of 10: What color is Ban?',
+glas : 'Question 5 of 10: What color is Glas?',
+bandearg : 'Question 6 of 10: What color is Bandearg?',
+gorm : 'Question 7 of 10: What color is Gorm?',
+corcra : 'Question 8 of 10: What color is Corcra?',
+dubh : 'Question 9 of 10: What color is Dubh?',
+liath :	'Question 10 of 10: What color is Liath?<'
+};
+
+
+var colorChoices = {
+bui1 : '',
+donn : '',
+dearg : '',
+ban : '',
+glas : '',
+bandearg : '',
+gorm : '',
+corcra : '',
+dubh : '',
+liath :	''
+};
+
+
+//From here on I haven't modified. Plan is to loop through each object and 'construct' the form
 
 $('#start').click(function () {
 	$('#intro').hide();
