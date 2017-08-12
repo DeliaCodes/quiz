@@ -12,3 +12,7 @@ main {
 		background-color: #caeef9;
 		font-family: 'Roboto', sans-serif;
 }
+
+.white {
+	text-decoration-color: white;
+}

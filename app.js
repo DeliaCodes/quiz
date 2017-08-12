@@ -35,7 +35,7 @@ $('#continue1').click(function(){
 	 alert('You got it right!');
 	 correctCount++}
 	else { 
-		alert('Sorry, that is not correct');
+		alert('Sorry, that is not correct. The correct answer is yellow.');
 		incorrectCount++}
 
 	$('#question1').detach();
@@ -52,7 +52,7 @@ $('#continue2').click(function(){
 	if ( userAnswer == answers['donn']) {
 		alert('You got it right!');
 		correctCount++}
-	else { alert('Sorry, that is not correct');
+	else { alert('Sorry, that is not correct. The correct answer is brown.');
 			incorrectCount++}
 	$('#question2').detach();
 	$('#question3').toggle();
@@ -67,7 +67,7 @@ $('#continue3').click(function(){
 	if ( userAnswer == answers['dearg']) {
 		alert('You got it right!');
 		correctCount++}
-	else { incorrectCount++}
+	else { alert('Sorry, that is not correct. The correct answer is red.'); incorrectCount++}
 	$('#question3').detach();
 	$('#question4').toggle();
 }
@@ -81,7 +81,8 @@ $('#continue4').click(function(){
 	if ( userAnswer == answers['ban']) {
 		alert('You got it right!');
 		correctCount++}
-	else { incorrectCount++}
+	else { alert('Sorry, that is not correct. The correct answer is white.'); 
+	incorrectCount++}
 	$('#question4').detach();
 	$('#question5').toggle();
 }
@@ -96,7 +97,7 @@ $('#continue5').click(function(){
 		alert('You got it right!');
 		correctCount++}
 	else {
-		alert('Sorry, that is not correct');
+		alert('Sorry, that is not correct. The correct answer is green.');
 		incorrectCount++}
 	$('#question5').detach();
 	$('#correct').html("You got " + correctCount + " colors right!")
