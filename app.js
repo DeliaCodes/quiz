@@ -13,6 +13,10 @@ var answers = {
 	glas : 'green',
 };
 
+function progress () {
+	$('.inlineResults').html('You have answered ' + correctCount + ' questions right and ' + incorrectCount + ' questions wrong so far.');
+};
+
 //
 
 $('#start').click(function () {
@@ -30,14 +34,14 @@ $('#start').click(function () {
 //Donn question
 $('#continue1').click(function(){
 	event.preventDefault();
-	var userAnswer = $('#question1 :input').val();
+	var userAnswer = $('#question1 :input:checked').val();
 	if ( userAnswer ==  answers['bui']) {
 	 alert('You got it right!');
 	 correctCount++}
 	else { 
 		alert('Sorry, that is not correct. The correct answer is yellow.');
 		incorrectCount++}
-	$('.inlineResults').html('You have answered ' + correctCount + ' questions right and ' + incorrectCount + ' questions wrong so far.')
+	progress ();
 	$('#question1').detach();
 	$('#question2').toggle();
 
@@ -48,12 +52,13 @@ $('#continue1').click(function(){
 //Dearg
 $('#continue2').click(function(){
 	event.preventDefault();
-	var userAnswer = $('#question2 :input');
+	var userAnswer = $('#question2 :input:checked').val();
 	if ( userAnswer == answers['donn']) {
 		alert('You got it right!');
 		correctCount++}
 	else { alert('Sorry, that is not correct. The correct answer is brown.');
 			incorrectCount++}
+	progress ();
 	$('#question2').detach();
 	$('#question3').toggle();
 }
@@ -63,11 +68,12 @@ $('#continue2').click(function(){
 //Ban
 $('#continue3').click(function(){
 	event.preventDefault();
-	var userAnswer = $('#question3 :input');
+	var userAnswer = $('#question3 :input:checked').val();
 	if ( userAnswer == answers['dearg']) {
 		alert('You got it right!');
 		correctCount++}
 	else { alert('Sorry, that is not correct. The correct answer is red.'); incorrectCount++}
+	progress ();
 	$('#question3').detach();
 	$('#question4').toggle();
 }
@@ -77,12 +83,13 @@ $('#continue3').click(function(){
 //Glas
 $('#continue4').click(function(){
 	event.preventDefault();
-	var userAnswer = $('#question4 :input');
+	var userAnswer = $('#question4 :input:checked').val();
 	if ( userAnswer == answers['ban']) {
 		alert('You got it right!');
 		correctCount++}
 	else { alert('Sorry, that is not correct. The correct answer is white.'); 
 	incorrectCount++}
+	progress ();
 	$('#question4').detach();
 	$('#question5').toggle();
 }
@@ -92,7 +99,7 @@ $('#continue4').click(function(){
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php
 $('#continue5').click(function(){
 	event.preventDefault();
-	var userAnswer = $('#question5 :input');
+	var userAnswer = $('#question5 :input:checked').val();
 	if ( userAnswer == answers['glas']) {
 		alert('You got it right!');
 		correctCount++}
