@@ -37,7 +37,7 @@ $('#continue1').click(function(){
 	else { 
 		alert('Sorry, that is not correct. The correct answer is yellow.');
 		incorrectCount++}
-
+	$('.inlineResults').html('You have answered ' + correctCount + ' questions right and ' + incorrectCount + ' questions wrong so far.')
 	$('#question1').detach();
 	$('#question2').toggle();
 
