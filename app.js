@@ -105,3 +105,7 @@ $('#continue5').click(function(){
 	$('#results').toggle();
 });
 
+$('#restart').click(function (){
+	location.reload();
+});
+
