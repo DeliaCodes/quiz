@@ -50,10 +50,11 @@ liath :	['brown','white','grey','black']
  Hopefully I can cleanup the repeated code below. 
  */
 
-//
+//how do I create choices?
 
 $('#start').click(function () {
 	$('#intro').hide();
+	$('#question').html(question['bui']);
 	$('updateMe').toggle();
 
 });
