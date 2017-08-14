@@ -46,14 +46,15 @@ liath :	['brown','white','grey','black']
 };
 
  /*Plan is to loop through each object and 'construct' each question adding the needed content using a skeleton form.
- Answers are checked and results from the last one will be displayed in the bottom of the 
+ Answers are checked and results from the last one will be displayed in the bottom of the page. 
+ Hopefully I can cleanup the repeated code below. 
  */
 
 //
 
 $('#start').click(function () {
 	$('#intro').hide();
-	$('updatemMe').toggle();
+	$('updateMe').toggle();
 
 });
 
