@@ -1,8 +1,6 @@
 "use strict";
 
-/* click to start the quiz - two choices for how to do this - remove and insert diff elements (seems messy!) or 
-you can hide the questions and then unhide them to progress which is what I've chosen.
-*/
+/* three objects - answers, questions, choices*/
 
 var correctCount = 0;
 var	incorrectCount = 0;
@@ -20,7 +18,6 @@ var answers = {
 
 };
 
-//what are my keys here? Question : color? or should it be bui : "Question x of y: What does Bui mean?"
 var questions = {
 bui : 'Question 1 of 10: What color is Bui?',
 donn : 'Question 2 of 10: What color is Donn?',
@@ -36,44 +33,39 @@ liath :	'Question 10 of 10: What color is Liath?<'
 
 
 var colorChoices = {
-bui1 : '',
-donn : '',
-dearg : '',
-ban : '',
-glas : '',
-bandearg : '',
-gorm : '',
-corcra : '',
-dubh : '',
-liath :	''
+bui : ['yellow', 'green', 'blue', 'grey'],
+donn : ['black','yellow','blue','brown'],
+dearg : ['black','green','red','white'],
+ban : ['brown','white','grey','black'],
+glas : ['blue','purple','red','green'],
+bandearg : ['pink','white','red','grey'],
+gorm : ['green','blue','pink','grey'],
+corcra : ['black','blue','yellow','purple'],
+dubh : ['grey','black','green','red'],
+liath :	['brown','white','grey','black']
 };
 
+ /*Plan is to loop through each object and 'construct' each question adding the needed content using a skeleton form.
+ Answers are checked and results from the last one will be displayed in the bottom of the 
+ */
 
-//From here on I haven't modified. Plan is to loop through each object and 'construct' each question
+//
 
 $('#start').click(function () {
 	$('#intro').hide();
-	$('#question1').toggle();
+	$('updatemMe').toggle();
 
 });
- /*Skeleton form at all time and then just change content. Currently loading form after JS is loaded.
- base form that checks if its right and updates the form
- class to right answer or current answers in a state and checked against that state.
- Container - word. Wrong Answers. Right Answer. And Function to update form based on that data system.
- */
+
 
 
 //Displays Donn question
 $('#continue1').click(function(){
-	var userAnswer = $('#question1 :input').val();
+	var userAnswer = $('#question1 :input:').val();
 	if ( userAnswer == answers['bui']) {correctCount++
 
 	}
 	else { incorrectCount++}
-
-	$('#question1').detach();
-	$('#question2').toggle();
-
 }
 );
 
@@ -83,8 +75,6 @@ $('#continue2').click(function(){
 	var userAnswer = $('#question2 :input');
 	if ( userAnswer == answers['donn']) {++correctCount}
 	else { incorrectCount++}
-	$('#question2').detach();
-	$('#question3').toggle();
 }
 );
 
@@ -95,8 +85,6 @@ $('#continue3').click(function(){
 	var userAnswer = $('#question3 :input');
 	if ( userAnswer == answers['dearg']) {++correctCount}
 	else { incorrectCount++}
-	$('#question3').detach();
-	$('#question4').toggle();
 }
 );
 
@@ -106,8 +94,6 @@ $('#continue4').click(function(){
 	var userAnswer = $('#question4 :input');
 	if ( userAnswer == answers['ban']) {++correctCount}
 	else { incorrectCount++}
-	$('#question4').detach();
-	$('#question5').toggle();
 }
 );
 
@@ -119,8 +105,7 @@ $('#continue5').click(function(){
 	var userAnswer = $('#question5 :input');
 	if ( userAnswer == answers['glas']) {++correctCount}
 	else { incorrectCount++}
-	$('#question5').detach();
-	$('#question6').toggle();
+
 }
 );
 
@@ -131,8 +116,7 @@ $('#continue6').click(function(){
 	var userAnswer = $('#question6 :input');
 	if ( userAnswer == answers['bandearg']) {++correctCount}
 	else { incorrectCount++}
-	$('#question6').detach();
-	$('#question7').toggle();
+	
 }
 );
 
@@ -143,8 +127,7 @@ $('#continue7').click(function(){
 	var userAnswer = $('#question7 :input');
 	if ( userAnswer == answers['gorm']) {++correctCount}
 	else { incorrectCount++}
-	$('#question7').detach();
-	$('#question8').toggle();
+
 }
 );
 
@@ -154,8 +137,7 @@ $('#continue8').click(function(){
 	var userAnswer = $('#question8 :input');
 	if ( userAnswer == answers['corcra']) {++correctCount}
 	else { incorrectCount++}
-	$('#question8').detach();
-	$('#question9').toggle();
+
 }
 );
 
@@ -165,8 +147,7 @@ $('#continue9').click(function(){
 	var userAnswer = $('#question9 :input');
 	if ( userAnswer == answers['dubh']) {++correctCount}
 	else { incorrectCount++}
-	$('#question9').detach();
-	$('#question10').toggle();
+	
 });
 
 
@@ -175,7 +156,7 @@ $('#continue10').click(function(){
 	var userAnswer = $('#question10 :input');
 	if ( userAnswer == answers['liath']) {++correctCount}
 	else { incorrectCount++}
-	$('#question10').detach();
+
 	$('#correct').html("You got " + correctCount + " colors right!")
 	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
 	$('#results').toggle();
