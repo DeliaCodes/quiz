@@ -48,6 +48,8 @@ liath :	['brown','white','grey','black']
  /*Plan is to loop through each object and 'construct' each question adding the needed content using a skeleton form.
  Answers are checked and results from the last one will be displayed in the bottom of the page. 
  Hopefully I can cleanup the repeated code below. 
+ How to iterate over over object? - an array of keys to keep track of where you are. - current key value - use with each object.
+break out functions - one for label, one for ____, etc and then call it on the 
  */
 
 //how do I create choices?
@@ -55,9 +57,19 @@ liath :	['brown','white','grey','black']
 $('#start').click(function () {
 	$('#intro').hide();
 	$('#question').html(question['bui']);
+	$('input').each(
+		for (var i = 0; i < Things.length; i++) {
+		Things[i]
+		);
+	
+	}
 	$('updateMe').toggle();
 
 });
+
+$().click(
+
+	);
 
 
 
@@ -74,7 +86,7 @@ $('#continue1').click(function(){
 
 //Displays Dearg
 $('#continue2').click(function(){
-	var userAnswer = $('#question2 :input');
+	var userAnswer = $('#question2 :input').val();
 	if ( userAnswer == answers['donn']) {++correctCount}
 	else { incorrectCount++}
 }
@@ -84,7 +96,7 @@ $('#continue2').click(function(){
 //Displays Ban
 $('#continue3').click(function(){
 	currentAnswer = 'red';
-	var userAnswer = $('#question3 :input');
+	var userAnswer = $('#question3 :input').val();
 	if ( userAnswer == answers['dearg']) {++correctCount}
 	else { incorrectCount++}
 }
@@ -93,7 +105,7 @@ $('#continue3').click(function(){
 
 //Displays Glas
 $('#continue4').click(function(){
-	var userAnswer = $('#question4 :input');
+	var userAnswer = $('#question4 :input').val();
 	if ( userAnswer == answers['ban']) {++correctCount}
 	else { incorrectCount++}
 }
@@ -104,7 +116,7 @@ $('#continue4').click(function(){
 //Displays Bandearg
 $('#continue5').click(function(){
 	currentAnswer = 'green';
-	var userAnswer = $('#question5 :input');
+	var userAnswer = $('#question5 :input').val();
 	if ( userAnswer == answers['glas']) {++correctCount}
 	else { incorrectCount++}
 
