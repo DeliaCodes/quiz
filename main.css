@@ -13,6 +13,16 @@ main {
 		font-family: 'Roboto', sans-serif;
 }
 
+form div {
+	max-width: 10em;
+	text-align: center;
+}
+
 .white {
 	color: white;
+}
+
+.radio {
+	
+	text-align: right;
 }
