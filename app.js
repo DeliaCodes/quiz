@@ -49,7 +49,7 @@ liath :	''
 };
 
 
-//From here on I haven't modified. Plan is to loop through each object and 'construct' the form
+//From here on I haven't modified. Plan is to loop through each object and 'construct' each question
 
 $('#start').click(function () {
 	$('#intro').hide();
@@ -104,7 +104,7 @@ $('#continue3').click(function(){
 //Displays Glas
 $('#continue4').click(function(){
 	var userAnswer = $('#question4 :input');
-	if ( userAnswer == answers['white']) {++correctCount}
+	if ( userAnswer == answers['ban']) {++correctCount}
 	else { incorrectCount++}
 	$('#question4').detach();
 	$('#question5').toggle();
@@ -117,7 +117,7 @@ $('#continue4').click(function(){
 $('#continue5').click(function(){
 	currentAnswer = 'green';
 	var userAnswer = $('#question5 :input');
-	if ( userAnswer == answers['green']) {++correctCount}
+	if ( userAnswer == answers['glas']) {++correctCount}
 	else { incorrectCount++}
 	$('#question5').detach();
 	$('#question6').toggle();
@@ -129,7 +129,7 @@ $('#continue5').click(function(){
 //Displays Gorm
 $('#continue6').click(function(){
 	var userAnswer = $('#question6 :input');
-	if ( userAnswer == answers['pink']) {++correctCount}
+	if ( userAnswer == answers['bandearg']) {++correctCount}
 	else { incorrectCount++}
 	$('#question6').detach();
 	$('#question7').toggle();
@@ -141,7 +141,7 @@ $('#continue6').click(function(){
 //Displays Corcra
 $('#continue7').click(function(){
 	var userAnswer = $('#question7 :input');
-	if ( userAnswer == answers['blue']) {++correctCount}
+	if ( userAnswer == answers['gorm']) {++correctCount}
 	else { incorrectCount++}
 	$('#question7').detach();
 	$('#question8').toggle();
@@ -152,7 +152,7 @@ $('#continue7').click(function(){
 //Dubh
 $('#continue8').click(function(){
 	var userAnswer = $('#question8 :input');
-	if ( userAnswer == answers['purple']) {++correctCount}
+	if ( userAnswer == answers['corcra']) {++correctCount}
 	else { incorrectCount++}
 	$('#question8').detach();
 	$('#question9').toggle();
@@ -163,7 +163,7 @@ $('#continue8').click(function(){
 
 $('#continue9').click(function(){
 	var userAnswer = $('#question9 :input');
-	if ( userAnswer == answers['black']) {++correctCount}
+	if ( userAnswer == answers['dubh']) {++correctCount}
 	else { incorrectCount++}
 	$('#question9').detach();
 	$('#question10').toggle();
@@ -173,7 +173,7 @@ $('#continue9').click(function(){
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php
 $('#continue10').click(function(){
 	var userAnswer = $('#question10 :input');
-	if ( userAnswer == answers['grey']) {++correctCount}
+	if ( userAnswer == answers['liath']) {++correctCount}
 	else { incorrectCount++}
 	$('#question10').detach();
 	$('#correct').html("You got " + correctCount + " colors right!")
