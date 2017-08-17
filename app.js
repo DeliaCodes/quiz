@@ -6,7 +6,7 @@ one array to access those objects
 
 var correctCount = 0;
 var	incorrectCount = 0;
-var arrayOfKeys = ['bui','donn','dearg','ban','glas','bandearg','gorm','corcra','dubh','liath'];
+var whichKey = ['bui','donn','dearg','ban','glas','bandearg','gorm','corcra','dubh','liath'];
 var answers = {
 	bui : 'yellow',
 	donn : 'brown',
@@ -59,16 +59,17 @@ break out functions - one for label, one for ____, etc and then call it on the
 
 $('#start').click(function () {
 	$('#intro').hide();
-	$('#question').html(question['bui']);
+	$('#question').html(questions[whichKey[0]]);
+	/*updating input old code
 	$('input').each(
 		for (var i = 0; i < Things.length; i++) {
-		Things[i]
-		);
-	
-	}
+		Things[i]}
+		);*/
 	$('updateMe').toggle();
+	}
+	
 
-});
+);
 
 $().click(
 
