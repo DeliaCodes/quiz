@@ -1,9 +1,12 @@
 "use strict";
 
-/* three objects - answers, questions, choices*/
+/* three objects - answers, questions, choices
+one array to access those objects
+*/
 
 var correctCount = 0;
 var	incorrectCount = 0;
+var arrayOfKeys = ['bui','donn','dearg','ban','glas','bandearg','gorm','corcra','dubh','liath'];
 var answers = {
 	bui : 'yellow',
 	donn : 'brown',
@@ -71,89 +74,6 @@ $().click(
 
 	);
 
-
-
-//Displays Donn question
-$('#continue1').click(function(){
-	var userAnswer = $('#question1 :input:').val();
-	if ( userAnswer == answers['bui']) {correctCount++
-
-	}
-	else { incorrectCount++}
-}
-);
-
-
-//Displays Dearg
-$('#continue2').click(function(){
-	var userAnswer = $('#question2 :input').val();
-	if ( userAnswer == answers['donn']) {++correctCount}
-	else { incorrectCount++}
-}
-);
-
-
-//Displays Ban
-$('#continue3').click(function(){
-	currentAnswer = 'red';
-	var userAnswer = $('#question3 :input').val();
-	if ( userAnswer == answers['dearg']) {++correctCount}
-	else { incorrectCount++}
-}
-);
-
-
-//Displays Glas
-$('#continue4').click(function(){
-	var userAnswer = $('#question4 :input').val();
-	if ( userAnswer == answers['ban']) {++correctCount}
-	else { incorrectCount++}
-}
-);
-
-
-
-//Displays Bandearg
-$('#continue5').click(function(){
-	currentAnswer = 'green';
-	var userAnswer = $('#question5 :input').val();
-	if ( userAnswer == answers['glas']) {++correctCount}
-	else { incorrectCount++}
-
-}
-);
-
-
-
-//Displays Gorm
-$('#continue6').click(function(){
-	var userAnswer = $('#question6 :input');
-	if ( userAnswer == answers['bandearg']) {++correctCount}
-	else { incorrectCount++}
-	
-}
-);
-
-
-
-//Displays Corcra
-$('#continue7').click(function(){
-	var userAnswer = $('#question7 :input');
-	if ( userAnswer == answers['gorm']) {++correctCount}
-	else { incorrectCount++}
-
-}
-);
-
-
-//Dubh
-$('#continue8').click(function(){
-	var userAnswer = $('#question8 :input');
-	if ( userAnswer == answers['corcra']) {++correctCount}
-	else { incorrectCount++}
-
-}
-);
 
 
 
