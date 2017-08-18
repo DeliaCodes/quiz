@@ -3,6 +3,14 @@
 	margin: 0px;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
 header {
 	background-color: #42f49e;
 	font-family: 'Slabo 27px', serif;
@@ -11,12 +19,17 @@ header {
 main {
 		background-color: #caeef9;
 		font-family: 'Roboto', sans-serif;
+		height: 100%;
 }
 
 #quiz {
-	height: 100%;
+	padding-top: 1em; 
 }
 
-form {
-	height: 100%;
+form div {
+
+}
+
+.white {
+	color: white;
 }

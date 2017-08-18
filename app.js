@@ -59,12 +59,12 @@ break out functions - one for label, one for ____, etc and then call it on the
 //how do I create choices?
 
 $('#start').click(function () {
-	$('#intro').hide();
+	$('#intro').detach();
 	$('#question').html(questions[whichKey[currentKey]]);
 	$('input').each( function (){
 		var i =0;
-		$( this ).html("value = " + colorChoices[whichKey[currentKey][i]])
-		i++
+		$(this).html("value = " + colorChoices[whichKey[currentKey][i]])
+		i++             
 	}	
 	);
 	$('#updateMe').toggle();
