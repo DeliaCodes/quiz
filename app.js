@@ -61,11 +61,12 @@ break out functions - one for label, one for ____, etc and then call it on the
 $('#start').click(function () {
 	$('#intro').hide();
 	$('#question').html(questions[whichKey[currentKey]]);
-	/*updating input old code
-	$('input').each(
-		for (var i = 0; i < Things.length; i++) {
-		Things[i]}
-		);*/
+	$('input').each( function (){
+		var i =0;
+		$( this ).html("value = " + colorChoices[whichKey[currentKey][i]])
+		i++
+	}	
+	);
 	$('#updateMe').toggle();
 	}
 	
