@@ -6,8 +6,8 @@ one array to access those objects
 
 var correctCount = 0;
 var	incorrectCount = 0;
-var currentKey = 0;
-var whichKey = ['bui','donn','dearg','ban','glas','bandearg','gorm','corcra','dubh','liath'];
+var currentQuestion = 0;
+var whichQuestion = ['bui','donn','dearg','ban','glas','bandearg','gorm','corcra','dubh','liath'];
 var answers = {
 	bui : 'yellow',
 	donn : 'brown',
@@ -49,35 +49,41 @@ dubh : ['grey','black','green','red'],
 liath :	['brown','white','grey','black']
 };
 
- /*Plan is to loop through each object and 'construct' each question adding the needed content using a skeleton form.
- Answers are checked and results from the last one will be displayed in the bottom of the page. 
- Hopefully I can cleanup the repeated code below. 
- How to iterate over over object? - an array of keys to keep track of where you are. - current key value - use with each object.
-break out functions - one for label, one for ____, etc and then call it on the 
- */
+//To Do
+//remove white class
+//checking answers
+//add feedback div
+// get styling a bit better
+//add results page
 
-//how do I create choices?
+function createQuestion () {
+$('#question').html(questions[whichQuestion[currentQuestion]]);
+	
+	$('input').each(function (index){
+		var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
+		$(this).html('value="' + colorChoices[whichQuestion[currentQuestion]][index] + '"');
+	});
+	
+	$('.choices').each(function(index){
+	var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
+	var needsWhiteText = ['green','brown','black','red','purple','blue'];
+	  $(this).html(inputArray)
+	  $(this).css("background-color", inputArray);
+	  if (needsWhiteText.includes(inputArray)) {$(this).addClass('white')};
+	  });
+};
 
 $('#start').click(function () {
 	$('#intro').detach();
-	
-	$('#question').html(questions[whichKey[currentKey]]);
-	
-	$('input').each(function (){
-		var inputArray = colorChoices[whichKey[currentKey[i]]].value();
-		for (var i = 0; i < inputArray.length-1; i++) {$(this).html('value="' + colorChoices[whichKey[currentKey[i]]] + '"');};             
-	});
-	
-	$('.choices').each(function(){
-	var inputArray = colorChoices[whichKey[currentKey[i]]].value();
-	for (var i = 0; i < inputArray.length-1; i++) {
-	  $(this).html('style="background-color: ' + colorChoices[whichKey[currentKey[i]]] + ';"')
-	  if (inputArray[i]=='green'||'brown'||'black'||'red'||'purple'||'blue') {$(this).addClass('white')};
-	  }});
+	createQuestion();
 	$('#updateMe').toggle();
 });
 
-$().click();
+$('#updateSubmitButton').click( function (){
+	event.preventDefault();
+	currentQuestion++;
+	createQuestion();
+	});
 
 
 
