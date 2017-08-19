@@ -68,11 +68,12 @@ $('#start').click(function () {
 		for (var i = 0; i < inputArray.length-1; i++) {$(this).html('value="' + colorChoices[whichKey[currentKey[i]]] + '"');};             
 	});
 	
-	$('.choices').each(
-	  $(this).html('style="background-color: ' + colorChoices[whichKey[currentKey[i]]] + ';"'));
-	$('.choices').each ( 
-	if (inputArray[i]=='green'||'brown'||'black'||'red'||'purple'||'blue') {$(this).addClass('white')};
-	);
+	$('.choices').each(function(){
+	var inputArray = colorChoices[whichKey[currentKey[i]]].value();
+	for (var i = 0; i < inputArray.length-1; i++) {
+	  $(this).html('style="background-color: ' + colorChoices[whichKey[currentKey[i]]] + ';"')
+	  if (inputArray[i]=='green'||'brown'||'black'||'red'||'purple'||'blue') {$(this).addClass('white')};
+	  }});
 	$('#updateMe').toggle();
 });
 
