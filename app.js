@@ -69,9 +69,8 @@ $('#start').click(function () {
 	});
 	
 	$('.choices').each(
-	  $(this).html('style="background-color: ' + colorChoices[whichKey[currentKey[i]]] + ';"');
-	  if (inputArray[i]=='green'||'brown'||'black'||'red'||'purple'||'blue') {$(this).addClass('white')};);
-	
+	  $(this).html('style="background-color: ' + colorChoices[whichKey[currentKey[i]]] + ';"'));
+	//if (inputArray[i]=='green'||'brown'||'black'||'red'||'purple'||'blue') {$(this).addClass('white')};
 	$('#updateMe').toggle();
 });
 
