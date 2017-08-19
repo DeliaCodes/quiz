@@ -32,7 +32,7 @@ bandearg : 'Question 6 of 10: What color is Bandearg?',
 gorm : 'Question 7 of 10: What color is Gorm?',
 corcra : 'Question 8 of 10: What color is Corcra?',
 dubh : 'Question 9 of 10: What color is Dubh?',
-liath :	'Question 10 of 10: What color is Liath?<'
+liath :	'Question 10 of 10: What color is Liath?'
 };
 
 
