@@ -60,22 +60,22 @@ break out functions - one for label, one for ____, etc and then call it on the
 
 $('#start').click(function () {
 	$('#intro').detach();
-	$('#question').html(questions[whichKey[currentKey]]);
-	$('input').each( function (){
-		var i =0;
-		$(this).html("value = " + colorChoices[whichKey[currentKey][i]])
-		i++             
-	}	
-	);
-	$('#updateMe').toggle();
-	}
 	
+	$('#question').html(questions[whichKey[currentKey]]);
+	
+	$('input').each(function (){
+		var inputArray = colorChoices[whichKey[currentKey[i]]].value();
+		for (var i = 0; i < inputArray.length-1; i++) {$(this).html('value="' + colorChoices[whichKey[currentKey[i]]] + '"');};             
+	});
+	
+	$('.choices').each(
+	  $(this).html('style="background-color: ' + colorChoices[whichKey[currentKey[i]]] + ';"');
+	  if (inputArray[i]=='green'||'brown'||'black'||'red'||'purple'||'blue') {$(this).addClass('white')};);
+	
+	$('#updateMe').toggle();
+});
 
-);
-
-$().click(
-
-	);
+$().click();
 
 
 
