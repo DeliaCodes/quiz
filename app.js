@@ -75,7 +75,7 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 
 function checkAnswer (){
 	var userAnswer = $('#updateSubmitButton :input:checked').val();
-	if (userAnswer == answers[whichQuestion[currentQuestion]]) {++correctCount}
+	if (userAnswer == answers[whichQuestion[currentQuestion]]) {correctCount++}
 	else {incorrectCount++}
 	
 };
@@ -95,7 +95,7 @@ $('#updateSubmitButton').click( function (){
 
 
 function resultsTally (){
-	$('updateMe').detach();
+	$('#updateMe').detach();
 	$('#correct').html("You got " + correctCount + " colors right!")
 	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
 	$('#results').toggle();
