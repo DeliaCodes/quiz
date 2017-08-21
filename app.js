@@ -75,8 +75,8 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 
 function checkAnswer (){
 	var userAnswer = $('#updateSubmitButton :input:checked').val();
-	if ( userAnswer == answers['dubh']) {++correctCount}
-	else { incorrectCount++}
+	if (userAnswer == answers[whichQuestion[currentQuestion]]) {++correctCount}
+	else {incorrectCount++}
 	
 };
 
@@ -88,6 +88,7 @@ $('#start').click(function () {
 
 $('#updateSubmitButton').click( function (){
 	event.preventDefault();
+	checkAnswer();
 	currentQuestion++;
 	createQuestion();
 	});
@@ -95,10 +96,6 @@ $('#updateSubmitButton').click( function (){
 
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php
 $('#continue10').click(function(){
-	var userAnswer = $('#question10 :input');
-	if ( userAnswer == answers['liath']) {++correctCount}
-	else { incorrectCount++}
-
 	$('#correct').html("You got " + correctCount + " colors right!")
 	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
 	$('#results').toggle();
