@@ -90,14 +90,13 @@ $('#updateSubmitButton').click( function (){
 	event.preventDefault();
 	checkAnswer();
 	currentQuestion++;
-	createQuestion();
+	if (currentQuestion==10) {resultsTally();} else {createQuestion();};
 	});
 
 
-//This is the results page - ref http://www.omniglot.com/language/colours/irish.php
-$('#continue10').click(function(){
+function resultsTally (){
 	$('#correct').html("You got " + correctCount + " colors right!")
 	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
 	$('#results').toggle();
-});
+};
 
