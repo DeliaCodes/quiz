@@ -50,7 +50,6 @@ liath :	['brown','white','grey','black']
 };
 
 //To Do
-//remove white class
 //checking answers
 //add feedback div
 // get styling a bit better
@@ -67,7 +66,7 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 	$('.choices').each(function(index){
 	var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
 	var needsWhiteText = ['green','brown','black','red','purple','blue'];
-	  $(this).html(inputArray)
+	  $(this).html(inputArray);
 	  $(this).css("background-color", inputArray);
 	  $(this).removeClass('white');
 	  if (needsWhiteText.includes(inputArray)) {$(this).addClass('white')};
@@ -75,7 +74,10 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 };
 
 function checkAnswer (){
-
+	var userAnswer = $('#updateSubmitButton :input:checked').val();
+	if ( userAnswer == answers['dubh']) {++correctCount}
+	else { incorrectCount++}
+	
 };
 
 $('#start').click(function () {
@@ -89,16 +91,6 @@ $('#updateSubmitButton').click( function (){
 	currentQuestion++;
 	createQuestion();
 	});
-
-
-
-
-$('#continue9').click(function(){
-	var userAnswer = $('#question9 :input');
-	if ( userAnswer == answers['dubh']) {++correctCount}
-	else { incorrectCount++}
-	
-});
 
 
 //This is the results page - ref http://www.omniglot.com/language/colours/irish.php

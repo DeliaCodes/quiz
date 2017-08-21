@@ -17,17 +17,21 @@ header {
 }
 
 main {
-		background-color: #caeef9;
-		font-family: 'Roboto', sans-serif;
-		height: 100%;
+	background-color: #caeef9;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
 }
 
 #quiz {
 	padding-top: 1em; 
 }
 
-form div {
+form input {
+	display: inline-flex;
+}
 
+form div {
+			height: 3em;
 }
 
 .white {
