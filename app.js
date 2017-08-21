@@ -95,8 +95,13 @@ $('#updateSubmitButton').click( function (){
 
 
 function resultsTally (){
+	$('updateMe').detach();
 	$('#correct').html("You got " + correctCount + " colors right!")
 	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
 	$('#results').toggle();
 };
+
+$('#restart').click(function (){
+	location.reload();
+});
 
