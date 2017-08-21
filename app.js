@@ -50,23 +50,21 @@ liath :	['brown','white','grey','black']
 };
 
 //To Do
-//checking answers
 //add feedback div
 // get styling a bit better
-//add results page
 
 function createQuestion () {
 $('#question').html(questions[whichQuestion[currentQuestion]]);
 	
 	$('input').each(function (index){
 		var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
-		$(this).html('value="' + colorChoices[whichQuestion[currentQuestion]][index] + '"');
+		$(this).val(colorChoices[whichQuestion[currentQuestion]][index]);
 	});
 	
 	$('.choices').each(function(index){
 	var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
 	var needsWhiteText = ['green','brown','black','red','purple','blue'];
-	  $(this).html(inputArray);
+	  $('.text',this).html(inputArray);
 	  $(this).css("background-color", inputArray);
 	  $(this).removeClass('white');
 	  if (needsWhiteText.includes(inputArray)) {$(this).addClass('white')};
@@ -74,9 +72,9 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 };
 
 function checkAnswer (){
-	var userAnswer = $('#updateSubmitButton :input:checked').val();
+	var userAnswer = $('#updateMe :input:checked').val();
 	if (userAnswer == answers[whichQuestion[currentQuestion]]) {correctCount++}
-	else {incorrectCount++}
+	else {incorrectCount++};
 	
 };
 
@@ -90,7 +88,7 @@ $('#updateSubmitButton').click( function (){
 	event.preventDefault();
 	checkAnswer();
 	currentQuestion++;
-	if (currentQuestion==10) {resultsTally();} else {createQuestion();};
+	if (currentQuestion>9) {resultsTally();} else {createQuestion();};
 	});
 
 

@@ -30,8 +30,19 @@ form input {
 	display: inline-flex;
 }
 
+input {
+		display: inline-block;
+		float: right;
+		margin-right: 1em;
+}
+
 form div {
 			height: 3em;
+			max-width: 15em;
+			margin: auto;
+			border-radius: 5em;
+			text-align: center;
+
 }
 
 .white {
