@@ -69,8 +69,13 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 	var needsWhiteText = ['green','brown','black','red','purple','blue'];
 	  $(this).html(inputArray)
 	  $(this).css("background-color", inputArray);
+	  $(this).removeClass('white');
 	  if (needsWhiteText.includes(inputArray)) {$(this).addClass('white')};
 	  });
+};
+
+function checkAnswer (){
+
 };
 
 $('#start').click(function () {
