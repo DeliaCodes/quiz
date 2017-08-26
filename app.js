@@ -90,12 +90,14 @@ $('#updateSubmitButton').click( function (){
 	currentQuestion++;
 	if (currentQuestion>9) {resultsTally();} else {createQuestion();};
 	});
-
+function updateTotals (){
+	$('.correct').html("You've gotten " + correctCount + " colors right!")
+	$('.incorrect').html("You've gotten " + incorrectCount + " colors wrong!")
+};
 
 function resultsTally (){
-	$('#updateMe').detach();
-	$('#correct').html("You got " + correctCount + " colors right!")
-	$('#incorrect').html("You got " + incorrectCount + " colors wrong!")
+	$('#quiz').detach();
+	updateTotals ();
 	$('#results').toggle();
 };
 
