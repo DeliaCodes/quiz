@@ -45,6 +45,11 @@ form div {
 
 }
 
+#feedback {
+		padding: 3em;
+}
+
+
 .white {
 	color: white;
 }

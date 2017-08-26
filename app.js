@@ -86,8 +86,14 @@ function giveFeedback () {
 		{$('#lastAnswer').html('Great job! Your last answer, '  + userAnswer + ' was correct.')}
 	else {$('#lastAnswer').html("I'm sorry. Your last answer,  " + userAnswer + ' was incorrect.')};
 	updateTotals ();
+	$('#updateMe').hide()
 	$('#feedback').show();
 }
+
+$('#continue').click( function (){
+	$('#feedback').hide();
+	$('#updateMe').show();
+	});
 
 $('#start').click(function () {
 	$('#intro').detach();
