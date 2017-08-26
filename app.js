@@ -49,16 +49,19 @@ dubh : ['grey','black','green','red'],
 liath :	['brown','white','grey','black']
 };
 
-//To Do
-//add feedback div
-// get styling a bit better
 
+
+/*uses the objects above to create the current question by udating the form with:
+1) the question being asked.
+2) which answers to offer as choices
+3) makes text white for dark color choices.	
+*/
 function createQuestion () {
 $('#question').html(questions[whichQuestion[currentQuestion]]);
-	
 	$('input').each(function (index){
 		var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
 		$(this).val(colorChoices[whichQuestion[currentQuestion]][index]);
+
 	});
 	
 	$('.choices').each(function(index){
@@ -72,7 +75,7 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 };
 
 
-
+//checks the answer to see if it is right or not. Increments the appropriate count.
 function checkAnswer (){
 	var userAnswer = $('#updateMe :input:checked').val();
 	if (userAnswer == answers[whichQuestion[currentQuestion]]) {correctCount++}
@@ -80,7 +83,11 @@ function checkAnswer (){
 	
 };
 
+/*inserts feedback (current right/wrong count, if the last answer was right) into the feedback div
+hides the question form, shows the feedback div
+*/
 function giveFeedback () {
+	
 	var userAnswer = $('#updateMe :input:checked').val();
 	if (userAnswer == answers[whichQuestion[currentQuestion]]) 
 		{$('#lastAnswer').html('Great job! Your last answer, '  + userAnswer + ' was correct.')}
@@ -90,17 +97,21 @@ function giveFeedback () {
 	$('#feedback').show();
 }
 
+//hides the feedback page, clears the radio button input, shows the next question.
 $('#continue').click( function (){
+	$('#updateMe :input:checked').prop('checked',false);
 	$('#feedback').hide();
 	$('#updateMe').show();
 	});
 
+//starts the quiz
 $('#start').click(function () {
 	$('#intro').detach();
 	createQuestion();
 	$('#updateMe').show();
 });
 
+//this is what happens when you answer a question
 $('#updateSubmitButton').click( function (){
 	event.preventDefault();
 	checkAnswer();
@@ -109,18 +120,20 @@ $('#updateSubmitButton').click( function (){
 	if (currentQuestion>9) {resultsTally();} else {createQuestion();};
 	});
 
-
+//updates user's correct and incorrect answer questions
 function updateTotals (){
 	$('.correct').html("You've gotten " + correctCount + " colors right!")
 	$('.incorrect').html("You've gotten " + incorrectCount + " colors wrong!")
 };
 
+//this is the final results page of the quiz
 function resultsTally (){
 	$('#quiz').detach();
 	updateTotals ();
 	$('#results').toggle();
 };
 
+//this restarts the quiz if the user so chooses
 $('#restart').click(function (){
 	location.reload();
 });
