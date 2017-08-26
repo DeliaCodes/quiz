@@ -63,13 +63,15 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 	
 	$('.choices').each(function(index){
 	var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
-	var needsWhiteText = ['green','brown','black','red','purple','blue'];
+	var needsWhiteText = ['green','brown','black','red','purple','blue','grey'];
 	  $('.text',this).html(inputArray);
 	  $(this).css("background-color", inputArray);
 	  $(this).removeClass('white');
 	  if (needsWhiteText.includes(inputArray)) {$(this).addClass('white')};
 	  });
 };
+
+
 
 function checkAnswer (){
 	var userAnswer = $('#updateMe :input:checked').val();
@@ -78,18 +80,30 @@ function checkAnswer (){
 	
 };
 
+function giveFeedback () {
+	var userAnswer = $('#updateMe :input:checked').val();
+	if (userAnswer == answers[whichQuestion[currentQuestion]]) 
+		{$('#lastAnswer').html('Great job! Your last answer, '  + userAnswer + ' was correct.')}
+	else {$('#lastAnswer').html("I'm sorry. Your last answer,  " + userAnswer + ' was incorrect.')};
+	updateTotals ();
+	$('#feedback').show();
+}
+
 $('#start').click(function () {
 	$('#intro').detach();
 	createQuestion();
-	$('#updateMe').toggle();
+	$('#updateMe').show();
 });
 
 $('#updateSubmitButton').click( function (){
 	event.preventDefault();
 	checkAnswer();
+	giveFeedback();
 	currentQuestion++;
 	if (currentQuestion>9) {resultsTally();} else {createQuestion();};
 	});
+
+
 function updateTotals (){
 	$('.correct').html("You've gotten " + correctCount + " colors right!")
 	$('.incorrect').html("You've gotten " + incorrectCount + " colors wrong!")
