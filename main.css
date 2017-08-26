@@ -3,13 +3,22 @@
 	margin: 0px;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: #caeef9;
+}
+
 header {
 	background-color: #42f49e;
 	font-family: 'Slabo 27px', serif;
 }
 
 main {
-		background-color: #caeef9;
+		
 		font-family: 'Roboto', sans-serif;
 }
 
@@ -18,11 +27,43 @@ form div {
 	text-align: center;
 }
 
-.white {
-	color: white;
-}
 
 .radio {
 	
 	text-align: right;
+	background-color: #caeef9;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+
+#quiz {
+	padding-top: 1em; 
+}
+
+form input {
+	display: inline-flex;
+}
+
+input {
+		display: inline-block;
+		float: right;
+		margin-right: 1em;
+}
+
+form div {
+			height: 3em;
+			max-width: 15em;
+			margin: auto;
+			border-radius: 5em;
+			text-align: center;
+
+}
+
+#feedback {
+		padding: 3em;
+}
+
+
+.white {
+	color: white;
 }

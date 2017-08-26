@@ -18,86 +18,33 @@
 	  <button id="start">Tosaigh</button>	
 	</div>
 
-	<form id="question1" style="display: none">
-	<label>Question 1 of 5: What color is Bui?</label><br>
-
-	<input class="radio" type="radio" name="color" value="yellow">
+	<form id="updateMe" style="display: none">
+		<label id="question"></label><br>
 	
-	<div style="background-color: yellow;" ><p>Yellow</p></div><br>
-	<input class="radio" type="radio" name="color" value="brown">
-	<div class="white" style="background-color: brown;"><p>Brown</p></div><br>
-	<input class="radio" type="radio" name="color" value="pink">
-	<div style="background-color: pink;"><p>Pink</p></div><br>
-	<input class="radio" type="radio" name="color" value="red" required>
-	<div class="white" style="background-color: red;"><p>Red</p></div><br>
-	<button type="submit" id="continue1">Submit Answer</button>
+	<div class="choices" style="background-color: yellow;" ><p class="text">Yellow</p>
+	<input type="radio" name="color" value="yellow"></div><br>
+	<div class="choices white" style="background-color: brown;"><p class="text">Brown</p>
+	<input type="radio" name="color" value="brown"></div><br>
+	<div class="choices" style="background-color: pink;"><p class="text">Pink</p>
+	<input type="radio" name="color" value="pink"></div><br>
+	<div class="choices" style="background-color: red;"><p class="text">Red</p>
+	<input type="radio" name="color" value="red" required></div><br>
+	<button type="submit" id="updateSubmitButton">Submit Answer</button>
 	</form>
-
-	<form id="question2" style="display: none">
-	<label>Question 2 of 5: What color is Donn?</label><br>
-	<input type="radio" name="color" value="white">
-	<div style="background-color: white;" ><p>White</p></div><br>
-	<input type="radio" name="color" value="brown">
-	<div class="white" style="background-color: brown;"><p>Brown</p></div><br>
-	<input type="radio" name="color" value="pink">
-	<div style="background-color: pink;"><p>Pink</p></div><br>
-	<input type="radio" name="color" value="green" required>
-	<div class="white" style="background-color: green;"><p>Green</p></div><br>
-	<button id="continue2">Submit Answer</button>
-	<p class="inlineResults" ></p>
-	</form>
-
-	<form id='question3' style="display: none">
-	<label>Question 3 of 5: What color is Dearg?</label><br>
-	<input type="radio" name="color" value="purple">
-	<div class="white" style="background-color: purple;" ><p>Purple</p></div><br>
-	<input type="radio" name="color" value="yellow">
-	<div style="background-color: yellow;"><p>Yellow</p></div><br>
-	<input type="radio" name="color" value="red">
-	<div class="white" style="background-color: red;"><p>Red</p></div><br>
-	<input type="radio" name="color" value="brown" required>
-	<div class="white" style="background-color: brown;"><p>Brown</p></div><br>
-	<button id="continue3">Submit Answer</button>
-	<p class="inlineResults" ></p>
-	</form>
-
-	<form id='question4' style="display: none">
-	<label>Question 4 of 5: What color is Ban?</label><br>
-	<input type="radio" name="color" value="pink">
-	<div style="background-color: pink;" ><p>Pink</p></div><br>
-	<input type="radio" name="color" value="grey">
-	<div class="white" style="background-color: grey;"><p>Grey</p></div><br>
-	<input type="radio" name="color" value="white">
-	<div style="background-color: white;"><p>White</p></div><br>
-	<input type="radio" name="color" value="red" required>
-	<div class="white" style="background-color: red;"><p>Red</p></div><br>
-	<button id="continue4">Submit Answer</button>
-	<p class="inlineResults" ></p>
-	</form>
-
-	<form id='question5' style="display: none">
-	<label>Question 5 of 5: What color is Glas?</label><br>
-	<input type="radio" name="color" value="green">
-	<div class="white" style="background-color: green;" ><p>Green</p></div><br>
-	<input type="radio" name="color" value="blue">
-	<div class="white" style="background-color: blue;"><p>Blue</p></div><br>
-	<input type="radio" name="color" value="black">
-	<div class="white" style="background-color: black;"><p>Black</p></div><br>
-	<input type="radio" name="color" value="brown" required>
-	<div class="white" style="background-color: brown;"><p>Brown</p></div><br>
-	<button id="continue5">Submit Answer</button>
-	<p class="inlineResults" ></p>
-	</form>
-
+	<div id="feedback" style="display: none">
+		<p id="lastAnswer"></p>
+		<p class="correct"></p>
+		<p class="incorrect"></p>
+		<button type="submit" id="continue">Next Question Please!</button>
+	</div>
+	</div>
 	
 	<div id="results" style="display: none">
 		<h1>You're done!</h1>
-		<p id="correct"></p>
-		<p id="incorrect"></p>
+		<p class="correct"></p>
+		<p class="incorrect"></p>
 		<a href="http://www.omniglot.com/language/colours/irish.php"> For more information on Colors in Irish, see this link.</a><br>
 		<button id="restart">Would You Like To Try Again?</button>
-	</div>
-
 	</div>
 </main>
 <script type="text/javascript" src="app.js"></script>
