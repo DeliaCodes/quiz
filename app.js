@@ -51,7 +51,7 @@ liath :	['brown','white','grey','black']
 
 
 
-/*uses the objects above to create the current question by udating the form with:
+/*uses the objects above to create the current question by updating the form with:
 1) the question being asked.
 2) which answers to offer as choices
 3) makes text white for dark color choices.	
@@ -120,7 +120,7 @@ $('#updateSubmitButton').click( function (){
 	if (currentQuestion>9) {resultsTally();} else {createQuestion();};
 	});
 
-//updates user's correct and incorrect answer questions
+//updates user's correct and incorrect answer totals
 function updateTotals (){
 	$('.correct').html("You've gotten " + correctCount + " colors right!")
 	$('.incorrect').html("You've gotten " + incorrectCount + " colors wrong!")
