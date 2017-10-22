@@ -20,15 +20,15 @@
 	<form id="updateMe" style="display: none">
 		<label lang="ga" id="question"></label><br>
 	<fieldset>
-     <!--<legend>Pick the meaning of the word above</legend>-->
-	 <div class="choices" style="background-color: yellow;" ><label for="color" class="text">Yellow</label>
-	  <input type="radio" name="color" value="yellow"></div><br>
-	 <div class="choices white" style="background-color: brown;"><p class="text">Brown</p>
-	  <input type="radio" name="color" value="brown"></div><br>
-	 <div class="choices" style="background-color: pink;"><p class="text">Pink</p>
-	  <input type="radio" name="color" value="pink"></div><br>
-	 <div class="choices" style="background-color: red;"><p class="text">Red</p>
-	  <input type="radio" name="color" value="red" required></div><br>
+     <legend>Pick the meaning of the word above</legend>
+	 <div class="choices" style="background-color: yellow;" ><label for="colorChoice1" class="text">Yellow</label>
+	  <input id="colorChoice1" type="radio" name="color" value="yellow"></div><br>
+	 <div class="choices white" style="background-color: brown;"><label for="colorChoice2" class="text">Brown</label>
+	  <input id="colorChoice2" type="radio" name="color" value="brown"></div><br>
+	 <div class="choices" style="background-color: pink;"><label for="colorChoice3" class="text">Pink</label>
+	  <input id="colorChoice3" type="radio" name="color" value="pink"></div><br>
+	 <div class="choices" style="background-color: red;"><label for="colorChoice4" class="text">Red</label>
+	  <input id="colorChoice4" type="radio" name="color" value="red" required></div><br>
 	 </fieldset>
 	 <button type="submit" id="updateSubmitButton">Submit Answer</button>
 	
