@@ -58,14 +58,14 @@ liath :	['brown','white','grey','black']
 function createQuestion () {
 $('#question').html(questions[whichQuestion[currentQuestion]]);
 	$('input').each(function (index){
-		var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
+		let inputArray = colorChoices[whichQuestion[currentQuestion]][index];
 		$(this).val(colorChoices[whichQuestion[currentQuestion]][index]);
 
 	});
 	
 	$('.choices').each(function(index){
-	var inputArray = colorChoices[whichQuestion[currentQuestion]][index];
-	var needsWhiteText = ['green','brown','black','red','purple','blue','grey'];
+	let inputArray = colorChoices[whichQuestion[currentQuestion]][index];
+	let needsWhiteText = ['green','brown','black','red','purple','blue','grey'];
 	  $('.text',this).html(inputArray);
 	  $(this).css("background-color", inputArray);
 	  $(this).removeClass('white');
@@ -76,7 +76,7 @@ $('#question').html(questions[whichQuestion[currentQuestion]]);
 
 //checks the answer to see if it is right or not. Increments the appropriate count.
 function checkAnswer (){
-	var userAnswer = $('#updateMe :input:checked').val();
+	let userAnswer = $('#updateMe :input:checked').val();
 	if (userAnswer == answers[whichQuestion[currentQuestion]]) {correctCount++}
 	else {incorrectCount++};
 	
@@ -87,7 +87,7 @@ hides the question form, shows the feedback div
 */
 function giveFeedback () {
 	
-	var userAnswer = $('#updateMe :input:checked').val();
+	let userAnswer = $('#updateMe :input:checked').val();
 	if (userAnswer == answers[whichQuestion[currentQuestion]]) 
 		{$('#lastAnswer').html('Great job! Your last answer, '  + userAnswer + ' was correct.')}
 	else {$('#lastAnswer').html("I'm sorry. Your last answer,  " + userAnswer + ' was incorrect.')};
