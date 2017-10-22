@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="en">
 <head>
 	<title>A Small Quiz</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <header>
@@ -15,11 +14,11 @@
 	<div id="intro">
 	  <p>Test your knowledge of Irish colors</p>
 	  <p>Click the Button to Begin</p>
-	  <button id="start">Tosaigh</button>	
+	  <button lang="ga" id="start">Tosaigh</button>	
 	</div>
 
 	<form id="updateMe" style="display: none">
-		<label id="question"></label><br>
+		<label lang="ga" id="question"></label><br>
 	
 	<div class="choices" style="background-color: yellow;" ><p class="text">Yellow</p>
 	<input type="radio" name="color" value="yellow"></div><br>
@@ -47,6 +46,7 @@
 		<button id="restart">Would You Like To Try Again?</button>
 	</div>
 </main>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
