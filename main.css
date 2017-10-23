@@ -69,6 +69,10 @@ fieldset {
 			border: 0;
 }
 
+legend {
+	display: none;
+}
+
 #feedback {
 		padding: 3em;
 }
