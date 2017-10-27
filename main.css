@@ -40,28 +40,21 @@ form div {
 	padding-top: 1em; 
 }
 
-/*form input {
-	display: inline-flex;
-}*/
 
-input {
-			display: inline-block;
-			float: right;
-			margin-right: 1em;
-			padding-top: 4em; 
-}
 
 label {
 			margin: auto;
-			display: flow-root;
 }
 
 form div {
-			height: 3em;
-			max-width: 15em;
-			margin: auto;
-			border-radius: 5em;
-			text-align: center;
+			padding-top: 1em;
+    		max-width: 15em;
+    		margin: auto;
+    		border-radius: 5em;
+    		text-align: center;
+    		line-height: 2em;
+    		padding-bottom: 1em;
+
 
 }
 
