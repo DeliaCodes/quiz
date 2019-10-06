@@ -1,16 +1,16 @@
 # quiz
 
-This is a small quiz to test knowledge of Irish colors. Words tested includes:
-Ban
-Bui
-Dearg
-Bandearg
-Glas
-Gorm
-Donn
-Dubh
-Liath
-Corcra
+This is a small quiz to test knowledge of Irish colors. [You can view it here.](https://deliacodes.github.io/quiz/) Words tested include:
+* Ban
+* Bui
+* Dearg
+* Bandearg
+* Glas
+* Gorm
+* Donn
+* Dubh
+* Liath
+* Corcra
 
 words to add eventually:
 dath
